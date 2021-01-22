@@ -25,7 +25,7 @@ class CreateProductosTable extends Migration
 
             $table->decimal('precio_unitario', 10)->comment('precio unitario');
 
-            $table->enum('unidad_de_medida', ['pieza', 'caja', 'kilogramo', 'metro', 'bolsa', 'otro'] )->comment('unidad_de_medida');
+            $table->enum('unidad_medida', ['pieza', 'caja', 'kilogramo', 'metro', 'bolsa', 'otro'] )->comment('unidad_medida');
             $table->enum('estatus', ['activo', 'inactivo'])->comment('estatus');
 
             $table->timestamps();
