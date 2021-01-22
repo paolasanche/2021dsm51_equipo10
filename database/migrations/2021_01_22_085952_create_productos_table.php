@@ -18,15 +18,16 @@ class CreateProductosTable extends Migration
             
             $table->id()->comment('id');
 
-            $table->string('clave', 25)->comment('clave');
-            $table->string('producto', 200)->comment('producto');
+            $table->string('clave', 25)->comment('Clave');
+            $table->string('producto', 200)->comment('Producto');
 
-            $table->unsignedInteger('existencias')->comment('existencias');
+            $table->unsignedInteger('existencias')->comment('Existencias');
 
-            $table->decimal('precio_unitario', 10)->comment('precio unitario');
+            $table->decimal('precio_unitario', 10, 2)->comment('Precio unitario');
 
-            $table->enum('unidad_medida', ['pieza', 'caja', 'kilogramo', 'metro', 'bolsa', 'otro'] )->comment('unidad_medida');
-            $table->enum('estatus', ['activo', 'inactivo'])->comment('estatus');
+            $table->enum('unidad_medida', ['pieza', 'caja', 'kilogramo', 'metro', 'bolsa', 'otro'])->comment('Unidad de medida');
+
+            $table->enum('estatus', ['activo','inactivo'])->comment('Estatus');
 
             $table->timestamps();
         

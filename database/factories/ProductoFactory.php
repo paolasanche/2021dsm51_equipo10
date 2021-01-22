@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Model;
+use App\Models\Producto;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ProductoFactory extends Factory
 {
@@ -12,7 +13,7 @@ class ProductoFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Producto::class;
 
     /**
      * Define the model's default state.
@@ -26,8 +27,8 @@ class ProductoFactory extends Factory
             'producto' => $this->faker->text(rand(100,200)),
             'existencias' => $this->faker->randomNumber(3, true),
             'precio_unitario' => $this->faker->randomFloat(2, 5, 100),
-            'unidad_medida' => $this->faker->randomElement(['pieza', 'caja', 'jilogramo', 'metro', 'bolsa', 'otro' ]),
-            'estatus' => $this->faker->randomElement('activo','inactivo')
+            'unidad_medida' => $this->faker->randomElement(['pieza', 'caja', 'kilogramo', 'metro', 'bolsa', 'otro' ]),
+            'estatus' => $this->faker->randomElement(['activo','inactivo'])
         ];
     }
 }
