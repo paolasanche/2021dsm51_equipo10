@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
+use App\Http\Resources\UserResource;
+use App\Models\User;
+use App\Http\Resources\UserCollection;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +31,20 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/user/{id}', function ($id) {
+    return new UserResource(User::findOrFail($id));
+});
+
+
+Route::get('/users', function () {
+    return UserResource::collection(User::all());
+});
+
+
+
+Route::get('/users', function () {
+    return UserResource::collection(User::all()->keyBy->id);
+});
+
