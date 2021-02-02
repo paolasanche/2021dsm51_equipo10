@@ -20,8 +20,6 @@ class CreateClientesTable extends Migration
             $table->string('correo_cliente', 200)->comment('correo_cliente');
             $table->string('edad_cliente', 200)->comment('edad_cliente');
             $table->string('direccion_cliente', 200)->comment('direccion_cliente');
-            
-            $table->timestamps();
         });
     }
 

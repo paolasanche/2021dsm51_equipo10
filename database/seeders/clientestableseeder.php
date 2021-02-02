@@ -1,10 +1,9 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
-
 
 class clientestableseeder extends Seeder
 {
@@ -14,7 +13,7 @@ class clientestableseeder extends Seeder
      * @return void
      */
     public function run()
-     {
+    {
         DB::table('clientes')->insert([
             ['nombre_cliente'=>'sandra', 'telefono_cliente'=>'7224327417', 'correo_cliente'=>'sandra123@gmail.com', 'edad_cliente'=>'35', 'direccion_cliente'=>'16 de sep #701'],
             ['nombre_cliente'=>'lilian', 'telefono_cliente'=>'7224327455', 'correo_cliente'=>'54lk3@gmail.com', 'edad_cliente'=>'22', 'direccion_cliente'=>'16 de sep #701'],
@@ -25,5 +24,5 @@ class clientestableseeder extends Seeder
 
 
         ]);
-     }
+    }
 }
