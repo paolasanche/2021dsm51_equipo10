@@ -19,6 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('tamano', 200)->comment('tamano');
             $table->string('descripcion', 200)->comment('descripcion');
             $table->decimal('precio', 200)->comment('precio');
+            $table->timestamps();
         });
     }
 

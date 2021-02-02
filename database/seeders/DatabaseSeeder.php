@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
        // \App\Models\Producto::factory(100)->create();
        $this->call(clientestableseeder::class);
        $this->call(productostableseeder::class);
+       $this->call(proveedorestableseeder::class);
        
     }
 }
