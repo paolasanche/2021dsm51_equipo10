@@ -22,9 +22,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('direccion_empleado', 200)->comment('direccion_empleado');
             $table->string('puesto_empleado', 200)->comment('puesto_empleado');
 
-            $table->integer('sucursal_id')->unsigned();            
-            $table->foreign('sucursal_id')->references('id')->on('sucursales');
-
+          
             $table->timestamps();
         });
     }
