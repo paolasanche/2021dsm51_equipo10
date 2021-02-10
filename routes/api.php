@@ -2,10 +2,12 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\AuthenticationException;
+
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Http\Resources\UserCollection;
-use Illuminate\Auth\AuthenticationException;
+
 /*
 |-----------------------------      s---------------------------------------------
 | API Routes
@@ -21,14 +23,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/tokens/create', function(Request $request){
+Route::post('/tokens/create', function (Request $request){
     $request->validate([
         'email' => 'required|email',
         'password' => 'required'
     ]);
 
     if(!auth()->attempt($request->only('email','password'))) {
-        throw new AutenticationException();
+       throw new AuthenticationException();
     }
 
     return [
@@ -39,7 +41,7 @@ Route::post('/tokens/create', function(Request $request){
 
 
 
-/*Route::get('/user/{id}', function ($id) {
+Route::get('/user/{id}', function ($id) {
      return new UserResource(User::findOrFail($id));
     });
 
@@ -47,4 +49,3 @@ Route::post('/tokens/create', function(Request $request){
     Route::get('/users', function () {
       return UserResource::collection(User::all());
     });
-*/

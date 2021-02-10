@@ -23,6 +23,8 @@ class CreatePedidosTable extends Migration
                     $table->integer('cliente_id')->unsigned();            
                     $table->foreign('cliente_id')->references('id')->on('clientes');
 
+                    $table->date('fecha_entrega', 200)->comment('fecha_entrega');
+
                     $table->timestamps();
             });
     }

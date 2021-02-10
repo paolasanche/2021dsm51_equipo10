@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\User;
 
-class userstableseeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class userstableseeder extends Seeder
      */
     public function run()
     {
-        $now = Carbon::now('America/Mexico_City')->format('Y-m-s H:i:s');
+        $now = Carbon::now('America/Mexico_City')->format('Y-m-d H:i:s');
         User::insert([
             'name' =>'paola',
             'email' => 'al221811737@gmai.com',
