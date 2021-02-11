@@ -1,0 +1,5 @@
+## Obtener Clientes
+GET http://127.0.0.1:8000/api/Clientes HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 2|ZpUn2ULjwEsXUDq45Q6Yrdz8ta9bzT1ctkHPQSwc

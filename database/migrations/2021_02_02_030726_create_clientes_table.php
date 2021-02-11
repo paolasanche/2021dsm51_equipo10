@@ -24,7 +24,7 @@ class CreateClientesTable extends Migration
             $table->string('municipio_cliente', 200)->comment('municipio_cliente');
             $table->string('codigopostal_cliente', 200)->comment('codigopostal_cliente');
             $table->string('forma_pago', 200)->comment('forma_pago');
-
+            $table->rememberToken();
             $table->timestamps();
         });
     }

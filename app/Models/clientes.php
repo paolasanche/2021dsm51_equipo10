@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -8,25 +7,20 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class clientes extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'name',
-        'primer_apellido',
-        'segundo_apellido',
-        'sexo',
-        'fecha_nacimiento',
-        'estatus',
-        'perfil',
-        'email',
-        'password',
+        'nombre_cliente',
+        'telefono_cliente',
+        'correo_cliente',
+        'edad_cliente',
+        'direccion_cliente',
+        'estado_cliente',
+        'municipio_cliente',
+        'codigopostal_cliente',
+        'forma_pago',
     ];
 
     /**
@@ -47,4 +41,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }

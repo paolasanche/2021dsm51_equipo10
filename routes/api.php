@@ -3,10 +3,17 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\AuthenticationException;
+use App\Http\Controllers\Api\ClientesController;
 
-use App\Http\Resources\UserResource;
+
+
+
+
+/*use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Http\Resources\UserCollection;
+*/
+
 
 /*
 |-----------------------------      s---------------------------------------------
@@ -18,6 +25,16 @@ use App\Http\Resources\UserCollection;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+
+
+
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::apiResource('Clientes', ClientesController::class)->except(['create', 'edit']);
+});
+
+
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -38,14 +55,3 @@ Route::post('/tokens/create', function (Request $request){
     ];
 
 });
-
-
-
-Route::get('/user/{id}', function ($id) {
-     return new UserResource(User::findOrFail($id));
-    });
-
-
-    Route::get('/users', function () {
-      return UserResource::collection(User::all());
-    });
