@@ -20,7 +20,7 @@ class clientes extends Authenticatable
         'estado_cliente',
         'municipio_cliente',
         'codigopostal_cliente',
-        'forma_pago',
+        'forma_pago'
     ];
 
     /**

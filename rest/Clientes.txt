@@ -3,3 +3,22 @@ GET http://127.0.0.1:8000/api/Clientes HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer 2|ZpUn2ULjwEsXUDq45Q6Yrdz8ta9bzT1ctkHPQSwc
+
+## Crear usuario 
+POST http://127.0.0.1:8000/api/Clientes HTTP/1.1 
+Content-Type: application/json 
+Accept: application/json 
+Authorization: Bearer 2|ZpUn2ULjwEsXUDq45Q6Yrdz8ta9bzT1ctkHPQSwc
+
+
+{ 
+        "nombre_cliente":"mauricio",
+        "telefono_cliente":"7258587471",
+        "correo_cliente":"hfg@gmail.com",
+        "edad_cliente":"15",
+        "direccion_cliente":"av. 1 mayo",
+        "estado_cliente":"mexico",
+        "municipio_cliente":"lerma",
+        "codigopostal_cliente":"55487",
+        "forma_pago":"efectivo"
+} 

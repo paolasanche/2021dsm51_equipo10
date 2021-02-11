@@ -39,7 +39,17 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre_cliente' => 'required|string|max:200'
+            , 'telefono_cliente' => 'required|string|max:200'
+            , 'correo_cliente' => 'required|string|max:200'
+            , 'edad_cliente' => 'required|string|max:200'
+            , 'direccion_cliente' => 'required|string|max:200'        
+            , 'estado_cliente' => 'required|string|max:200'
+            , 'municipio_cliente' => 'required|string|max:200'
+            , 'codigopostal_cliente' => 'required|string|max:200'
+            , 'forma_pago' => 'required|string|max:200'
+            ]);
     }
 
     /**
