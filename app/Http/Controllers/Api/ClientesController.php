@@ -97,8 +97,10 @@ return new ClientesResource($clientes);
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $clientes = clientes::findOrFail($id);
+        $clientes->delete($request->all());
+        return response()->json($clientes);
     }
 }
