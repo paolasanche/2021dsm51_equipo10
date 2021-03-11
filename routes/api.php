@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\AuthenticationException;
 use App\Http\Controllers\Api\ClientesController;
+use App\Http\Controllers\Api\ComprasController;
 
 
 
@@ -71,5 +72,14 @@ Route::post('/tokens/create', function (Request $request){
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('clientes', ClientesController::class)->except(['create', 'edit']);
     Route::apiResource('clientes', ClientesController::class)->except(['delete']);
+  
+});
+
+
+
+   
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('compras', ComprasController::class)->except(['create', 'edit']);
+    Route::apiResource('compras', ComprasController::class)->except(['delete']);
   
 });
