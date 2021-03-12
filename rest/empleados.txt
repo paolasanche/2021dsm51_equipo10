@@ -1,0 +1,8 @@
+## Obtener empleados
+GET http://127.0.0.1:8000/api/empleados HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+
+//
