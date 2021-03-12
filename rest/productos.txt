@@ -14,16 +14,14 @@ Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 { 
-        "nombre_cliente":"andrea",
-        "telefono_cliente":"7258587471",
-        "correo_cliente":"hfg@gmail.com",
-        "edad_cliente":"15",
-        "direccion_cliente":"av. 1 mayo",
-        "estado_cliente":"mexico",
-        "municipio_cliente":"lerma",
-        "codigopostal_cliente":"55487",
-        "forma_pago":"efectivo"
+
+      "sabor": "zarzamora",
+      "tamano": "pequeno",
+      "descripcion": "familiar",
+      "precio": "350"
 } 
+
+
 
 ##Actualizar cliente
 PATCH http://127.0.0.1:8000/api/productos/6 HTTP/1.1
