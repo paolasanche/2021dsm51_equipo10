@@ -32,7 +32,7 @@ Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 {
-    "nombre_cliente":"alejandara",
+    "nombre_cliente":"ale",
         "telefono_cliente":"7258587471",
         "correo_cliente":"hfg@gmail.com",
         "edad_cliente":"15",
