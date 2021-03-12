@@ -21,7 +21,7 @@ class empleadosResource extends JsonResource
             'telefono_empleado' => $this->telefono_empleado,
             'correo_empleado' => $this->correo_empleado,            
             'drireccion_empleado' => $this->drireccion_empleado,
-            'puesto_empleado' => $this->estado_empleado,           
+            'puesto_empleado' => $this->puesto_empleado,           
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

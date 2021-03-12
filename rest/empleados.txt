@@ -5,4 +5,18 @@ Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 
-//
+## Crear empleados
+POST http://127.0.0.1:8000/api/empleados HTTP/1.1 
+Content-Type: application/json 
+Accept: application/json 
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{ 
+        "nombre_empleado":"agustin",
+        "edad_empleado":"15",
+        "telefono_empleado":"7258587471",
+        "correo_empleado":"hfg@gmail.com",
+        "direccion_empleado":"av. 1 mayo",
+        "puesto_empleado":"administrador"
+
+} 

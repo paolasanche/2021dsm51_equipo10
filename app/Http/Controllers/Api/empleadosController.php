@@ -38,7 +38,17 @@ class empleadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre_empleado' => 'required|string|max:200'
+            , 'edad_empleado' => 'required|string|max:200'
+            , 'telefono_empleado' => 'required|string|max:200'
+            , 'correo_empleado' => 'required|string|max:200'
+            , 'direccion_empleado' => 'required|string|max:200'        
+            , 'puesto_empleado' => 'required|string|max:200'
+            ]);
+
+            $empleados = empleados::create($request->all());
+            return new empleadosResource($empleados);
     }
 
     /**
@@ -72,7 +82,9 @@ class empleadosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empleados = empleados::findOrFail($id);
+        $empleados->update($request->all());
+        return response()->json($empleados);
     }
 
     /**

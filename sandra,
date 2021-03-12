@@ -1,0 +1,144 @@
+[33mcommit 01f82b2acd48239c7113d5ae088241893b4a8598[m[33m ([m[1;36mHEAD -> [m[1;32mflutter_authentication_with_laravel_sanctum[m[33m, [m[1;31morigin/flutter_authentication_with_laravel_sanctum[m[33m)[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 23:20:29 2021 -0600
+
+    API REST listado de empleados
+
+[33mcommit 317b1d98c41d32ee5a0479e536e9cfcf5c0c85dc[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 20:36:48 2021 -0600
+
+    API REST eliminacion  de compras
+
+[33mcommit b31f922d7f2ab983351e47f0e1e02c09da2be5f8[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 20:33:57 2021 -0600
+
+    API REST modificacion  de compras
+
+[33mcommit 338b8a627a1afba5938750d3dc5984ba47a0d996[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 20:13:00 2021 -0600
+
+    API REST listado de compras
+
+[33mcommit 57225000041dc15ce24cc7352b94b6c715ccb849[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 01:34:01 2021 -0600
+
+    API REST altas compras
+
+[33mcommit 9ca6f3f514351652073648d20714d07eb9bead46[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 00:47:40 2021 -0600
+
+    eliminaciones clientes
+
+[33mcommit 9cf0405df534128a55f2ff75645cccdb49f3713d[m
+Merge: a2928ae 560c7ff
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Thu Mar 11 00:22:50 2021 -0600
+
+    modificaciones clientes
+
+[33mcommit a2928aee5244a247ce0be1f56fd6ac85a1bb07b9[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Fri Feb 19 20:01:40 2021 -0600
+
+    migraciones nuevas
+
+[33mcommit 560c7ffd127062adde17dd18014368b60dfec4d0[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Wed Feb 10 22:02:08 2021 -0600
+
+    alta de clientes
+
+[33mcommit 658a5127ec73da4ad4a2db399df871320d65c906[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Wed Feb 10 19:21:20 2021 -0600
+
+    API REST listado de clientes
+
+[33mcommit d7bcf6f4c4de9a95353bef8eb49c954d4d71bca9[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Wed Feb 10 00:30:35 2021 -0600
+
+    instalacion de sanctum yobtencion de API token
+
+[33mcommit 236ad4d8c009cf1f282ab8da2bb7fe748401ce11[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Tue Feb 9 19:05:53 2021 -0600
+
+    api token tabla users
+
+[33mcommit 818fab21094121945b16189e60fd688fbbc1f9ae[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Tue Feb 9 17:10:52 2021 -0600
+
+    correccion base de datos
+
+[33mcommit 103cd02be2bf29581062421f4c71b647427113a9[m
+Author: DSM51 Jesus Raul Jimenez Esquivel <al221910356@gmail.com>
+Date:   Wed Feb 3 20:35:21 2021 -0600
+
+    migraciones y seeder de empleados
+
+[33mcommit aec8fcc009d91b397293112c395c302f430449d5[m
+Author: DSM51 Jesus Raul Jimenez Esquivel <al221910356@gmail.com>
+Date:   Wed Feb 3 20:16:51 2021 -0600
+
+    migraciones y seeder de pedidos
+
+[33mcommit 72a42580ac00445e918025804096af8d081c135b[m
+Author: Brenda Ximena Duro Sanchez <al221712143@gmail.com>
+Date:   Wed Feb 3 00:10:00 2021 -0600
+
+    Migracines y seeder de sucursales
+
+[33mcommit d0d40b171b48e900d73c1984738f010d16670912[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Mon Feb 1 21:50:58 2021 -0600
+
+    Migraciones y seeder proveedores
+
+[33mcommit 636d79e2dc109e4fed5b0e9b22ab86a9aca5e805[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Mon Feb 1 21:20:40 2021 -0600
+
+    Migraciones y seeder de productos
+
+[33mcommit 6f1fed5507bf4bad6b1e4c0ac4b2c27aac877a94[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Mon Feb 1 21:15:25 2021 -0600
+
+    Migraciones y seeder de clientes
+
+[33mcommit c780818e489e3697a4a302e42be5730c97045834[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Wed Jan 27 23:53:10 2021 -0600
+
+    Eloquent API Resources
+
+[33mcommit d6e9b0f9a45c679f01ee7fb307f0648d7c6afe39[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Fri Jan 22 05:53:34 2021 -0600
+
+    Listado de productos
+
+[33mcommit 6a9ef145c180662ce44db3bd5053d8630ac5c908[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Fri Jan 22 03:57:50 2021 -0600
+
+    Factory y seeder de productos
+
+[33mcommit e91fa937409faccdd90db3cd651a62c4c993b02f[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Fri Jan 22 03:19:05 2021 -0600
+
+    Migración y modelo de Producto
+
+[33mcommit 61979c9a2ddde7406fff51ed461fb23e80c88ee9[m
+Author: Cynthia Paola Duro Sanchez <al221811737@gmail.com>
+Date:   Fri Jan 22 02:41:06 2021 -0600
+
+    initial commit
