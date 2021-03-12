@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\comprasResource;
 use App\Http\Resources\comprasCollection;
+use App\Models\clientes;
+use App\Models\empleados;
+use App\Models\productos;
+use App\Models\pedidos;
 use App\Models\compras;
 
 
@@ -40,7 +44,10 @@ class ComprasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     
+     
+            $compras = compras::create($request->all());
+            return new comprasResource($compras);
     }
 
     /**

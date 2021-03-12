@@ -20,8 +20,6 @@ class comprasResource extends JsonResource
             'producto_id' => $this->producto_id,
             'cliente_id' => $this->cliente_id,
             'estado_compra' => $this->estado_compra,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-        ];
+            ];
     }
 }
