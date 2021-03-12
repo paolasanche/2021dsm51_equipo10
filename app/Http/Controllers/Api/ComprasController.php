@@ -44,7 +44,13 @@ class ComprasController extends Controller
      */
     public function store(Request $request)
     {
-     
+        $request->validate([
+            'pedido_id' => 'required|string|max:200'
+            , 'producto_id' => 'required|string|max:200'
+            , 'cliente_id' => 'required|string|max:200'
+            , 'estado_compra' => 'required|string|max:200'
+             ]);
+
      
             $compras = compras::create($request->all());
             return new comprasResource($compras);
@@ -81,7 +87,9 @@ class ComprasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $compras = compras::findOrFail($id);
+        $compras->update($request->all());
+        return response()->json($compras);
     }
 
     /**
@@ -92,6 +100,8 @@ class ComprasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $compras = compras::findOrFail($id);
+        $compras->delete($request->all());
+        return response()->json($compras);
     }
 }
