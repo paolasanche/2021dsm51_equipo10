@@ -6,6 +6,7 @@ use Illuminate\Auth\AuthenticationException;
 use App\Http\Controllers\Api\ClientesController;
 use App\Http\Controllers\Api\ComprasController;
 use App\Http\Controllers\Api\empleadosController;
+use App\Http\Controllers\Api\productosController;
 
 
 
@@ -90,3 +91,9 @@ Route::middleware('auth:sanctum')->group(function () {
   
 });
 
+   
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('productos', productosController::class)->except(['create', 'edit']);
+    Route::apiResource('productos', productosController::class)->except(['delete']);
+  
+});
