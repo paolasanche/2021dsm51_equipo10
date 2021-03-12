@@ -14,56 +14,43 @@ Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 { 
-        "nombre_cliente":"andrea",
-        "telefono_cliente":"7258587471",
-        "correo_cliente":"hfg@gmail.com",
-        "edad_cliente":"15",
-        "direccion_cliente":"av. 1 mayo",
-        "estado_cliente":"mexico",
-        "municipio_cliente":"lerma",
-        "codigopostal_cliente":"55487",
-        "forma_pago":"efectivo"
+        "fecha": "25-01-2020",
+      "producto_id": "2",
+      "cliente_id": "1",
+      "fecha_entrega": "25-01-2020"
 } 
 
-##Actualizar cliente
-PATCH http://127.0.0.1:8000/api/pedidos/6 HTTP/1.1
+
+
+##Actualizar pedidos
+PATCH http://127.0.0.1:8000/api/pedidos/1 HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 {
-    "nombre_cliente":"ale",
-        "telefono_cliente":"7258587471",
-        "correo_cliente":"hfg@gmail.com",
-        "edad_cliente":"15",
-        "direccion_cliente":"av. 1 mayo",
-        "estado_cliente":"mexico",
-        "municipio_cliente":"lerma",
-        "codigopostal_cliente":"55487",
-        "forma_pago":"efectivo"
+  
+      "id": 1,
+      "fecha": "25-01-2020",
+      "producto_id": "2",
+      "cliente_id": "2",
+      "fecha_entrega": "25-01-2020"
 }
 
 
 
 
-DELETE http://127.0.0.1:8000/api/pedidos/4 HTTP/1.1
+DELETE http://127.0.0.1:8000/api/pedidos/2 HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
 
 {
-       "id": 4,
-      "nombre_cliente": "cassandra",
-      "telefono_cliente": "7212365417",
-      "correo_cliente": "vcfvg2555@gmail.com",
-      "edad_cliente": "25",
-      "drireccion_cliente": null,
-      "estado_cliente": "mexico",
-      "municipio_cliente": "toluca",
-      "codigopostal_cliente": "52106",
-      "forma_pago": "efectivo",
-      "created_at": null,
-      "updated_at": null
+     "id": 2,
+      "fecha": "25-01-2020",
+      "producto_id": "3",
+      "cliente_id": "1",
+      "fecha_entrega": "25-01-2020"
    
 }
 
