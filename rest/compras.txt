@@ -1,0 +1,51 @@
+## Obtener compras
+GET http://127.0.0.1:8000/api/compras HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+## Crear compras
+POST http://127.0.0.1:8000/api/compras HTTP/1.1 
+Content-Type: application/json 
+Accept: application/json 
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+
+{ 
+        "pedido_id":"2",
+        "producto_id":"3",
+        "cliente_id":1",
+        "estado_compra":"enviando",
+       
+} 
+
+
+##Actualizar cliente
+PATCH http://127.0.0.1:8000/api/compras/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{
+    "pedido_id":"2",
+        "producto_id":"2",
+        "cliente_id":2",
+        "estado_compra":"enviando",
+}
+
+
+
+DELETE http://127.0.0.1:8000/api/compras/4 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{
+     "id": 4,
+      "pedido_id": "1",
+      "producto_id": "2",
+      "cliente_id": "3",
+      "estado_compra": "pendiente"
+   
+}
+

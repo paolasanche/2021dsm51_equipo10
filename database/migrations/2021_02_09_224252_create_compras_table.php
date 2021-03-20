@@ -15,7 +15,7 @@ class CreateComprasTable extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->bigIncrements('id');
-           
+     
             $table->integer('pedido_id')->unsigned();            
             $table->foreign('pedido_id')->references('id')->on('pedidos');
 
@@ -24,8 +24,19 @@ class CreateComprasTable extends Migration
 
             $table->integer('cliente_id')->unsigned();            
             $table->foreign('cliente_id')->references('id')->on('clientes');
+/*
 
+
+            $table->string('pedido_id', 200)->comment('pedido_id');
+
+            $table->string('producto_id', 200)->comment('producto_id');
+
+            $table->string('cliente_id', 200)->comment('cliente_id');
+            
+¨*/
             $table->string('estado_compra', 200)->comment('estado_compra');
+
+
 
             $table->timestamps();
         });

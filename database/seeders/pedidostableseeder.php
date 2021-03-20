@@ -20,7 +20,7 @@ class pedidostableseeder extends Seeder
             ['fecha'=>'25-01-2020', 'producto_id'=>'1', 'cliente_id'=>'2','fecha_entrega'=>'25-01-2020'],
             ['fecha'=>'25-01-2020', 'producto_id'=>'2', 'cliente_id'=>'3','fecha_entrega'=>'25-01-2020'],
             ['fecha'=>'25-01-2020', 'producto_id'=>'1', 'cliente_id'=>'2','fecha_entrega'=>'25-01-2020'],
-       
+     
 
         ]);
     }

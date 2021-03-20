@@ -50,6 +50,9 @@ class ClientesController extends Controller
             , 'codigopostal_cliente' => 'required|string|max:200'
             , 'forma_pago' => 'required|string|max:200'
             ]);
+
+            $clientes = clientes::create($request->all());
+return new ClientesResource($clientes);
     }
 
     /**
@@ -83,7 +86,9 @@ class ClientesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $clientes = clientes::findOrFail($id);
+        $clientes->update($request->all());
+        return response()->json($clientes);
     }
 
     /**
@@ -92,8 +97,10 @@ class ClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $clientes = clientes::findOrFail($id);
+        $clientes->delete($request->all());
+        return response()->json($clientes);
     }
 }

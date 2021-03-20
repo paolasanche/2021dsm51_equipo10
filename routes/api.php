@@ -4,7 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\AuthenticationException;
 use App\Http\Controllers\Api\ClientesController;
-
+use App\Http\Controllers\Api\ComprasController;
+use App\Http\Controllers\Api\empleadosController;
+use App\Http\Controllers\Api\productosController;
+use App\Http\Controllers\Api\pedidosController;
 
 
 
@@ -26,6 +29,14 @@ use App\Http\Resources\UserCollection;
 |
 */
 
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::middleware('auth:sanctum')->get('/user/posts', function (Request $request) {
+    return $request->user()->posts;
+});
 
 
 
@@ -54,4 +65,40 @@ Route::post('/tokens/create', function (Request $request){
         'token' => auth()->user()->createToken('test')->plainTextToken
     ];
 
+});
+
+
+
+
+   
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('clientes', ClientesController::class)->except(['create', 'edit']);
+    Route::apiResource('clientes', ClientesController::class)->except(['delete']);
+  
+});
+
+   
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('compras', ComprasController::class)->except(['create', 'edit']);
+    Route::apiResource('compras', ComprasController::class)->except(['delete']);
+  
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('empleados', empleadosController::class)->except(['create', 'edit']);
+    Route::apiResource('empleados', empleadosController::class)->except(['delete']);
+  
+});
+
+   
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('productos', productosController::class)->except(['create', 'edit']);
+    Route::apiResource('productos', productosController::class)->except(['delete']);
+  
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('pedidos', pedidosController::class)->except(['create', 'edit']);
+    Route::apiResource('pedidos', pedidosController::class)->except(['delete']);
+  
 });

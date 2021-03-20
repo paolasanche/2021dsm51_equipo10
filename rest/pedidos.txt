@@ -1,0 +1,57 @@
+## Obtener pedidos
+GET http://127.0.0.1:8000/api/pedidos HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+
+
+
+## Crear pedidos
+POST http://127.0.0.1:8000/api/pedidos HTTP/1.1 
+Content-Type: application/json 
+Accept: application/json 
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{ 
+        "fecha": "25-01-2020",
+      "producto_id": "2",
+      "cliente_id": "1",
+      "fecha_entrega": "25-01-2020"
+} 
+
+
+
+##Actualizar pedidos
+PATCH http://127.0.0.1:8000/api/pedidos/5 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{
+  
+      "id": 1,
+      "fecha": "25-01-2020",
+      "producto_id": "1",
+      "cliente_id": "1",
+      "fecha_entrega": "25-01-2020"
+}
+
+
+
+
+DELETE http://127.0.0.1:8000/api/pedidos/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sqHxxV6m4DZCrIxRLOUeUhFy6565F4GubXKRVWyU
+
+{
+     "id": 2,
+      "fecha": "25-01-2020",
+      "producto_id": "3",
+      "cliente_id": "1",
+      "fecha_entrega": "25-01-2020"
+   
+}
+
+
